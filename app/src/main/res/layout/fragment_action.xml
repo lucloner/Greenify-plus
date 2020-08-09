@@ -1,0 +1,116 @@
+<LinearLayout android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/BtnShareLoc"
+                android:text="Share Location"
+                android:gravity="start"
+                android:textSize="20dp"
+                android:background="@drawable/action_baground"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <Button
+                android:id="@+id/BtnSpeaker"
+                android:text="Speaker Phone on"
+                android:gravity="start"
+                android:textSize="20dp"
+                android:background="@drawable/action_baground"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <Button
+                android:id="@+id/BtnPlaySong"
+                android:text="Play : Selected song"
+                android:gravity="start"
+                android:textSize="20dp"
+                android:background="@drawable/action_baground"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <Button
+                android:id="@+id/BtnAnsCall"
+                android:text="Answer Call"
+                android:gravity="start"
+                android:textSize="20dp"
+                android:background="@drawable/action_baground"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <Button
+                android:id="@+id/BtnRejCall"
+                android:text="Call reject"
+                android:gravity="start"
+                android:textSize="20dp"
+                android:background="@drawable/action_baground"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <Button
+                android:id="@+id/BtnSayTime"
+                android:text="Say Current Time"
+                android:gravity="start"
+                android:textSize="20dp"
+                android:background="@drawable/action_baground"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <Button
+                android:id="@+id/BtnTakePic"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/action_baground"
+
+                android:gravity="left"
+                android:text="Take Picture"
+                android:textSize="20dp" />
+
+            <Button
+                android:id="@+id/BtnMobData"
+                android:text="Mobile data on"
+                android:gravity="start"
+                android:textSize="20dp"
+                android:background="@drawable/action_baground"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <Button
+                android:id="@+id/BtnVolInc"
+                android:text="Volume Increased"
+                android:gravity="start"
+                android:textSize="20dp"
+                android:background="@drawable/action_baground"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <Button
+                android:id="@+id/BtnVolDec"
+                android:text="Volume Decreased"
+                android:gravity="start"
+                android:textSize="20dp"
+                android:background="@drawable/action_baground"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+
+
+
+</LinearLayout>

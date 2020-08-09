@@ -1,0 +1,102 @@
+
+<LinearLayout android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="400px">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+
+
+
+
+
+
+            <Button
+                android:id="@+id/BtnSwipeL"
+                android:text="Swipe Screen (Left)\n->open browser\n"
+                android:gravity="start"
+                android:textSize="20dp"
+                android:background="@drawable/action_baground"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <Button
+                android:id="@+id/BtnSwipeR"
+                android:text="Swipe Screen (Right)\n->open calculator\n"
+                android:gravity="start"
+                android:textSize="20dp"
+                android:background="@drawable/action_baground"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <Button
+                android:id="@+id/BtnSwipeT"
+                android:text="Swipe Screen (Top)\n->open whatsapp\n"
+                android:gravity="start"
+                android:textSize="20dp"
+                android:background="@drawable/action_baground"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <Button
+                android:id="@+id/BtnSwipeB"
+                android:text="Swipe Screen (bottom)"
+                android:gravity="start"
+                android:textSize="20dp"
+                android:background="@drawable/action_baground"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <Button
+                android:id="@+id/BtnConnectToNet"
+                android:text="Connect to Network"
+                android:gravity="start"
+                android:textSize="20dp"
+                android:background="@drawable/action_baground"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <Button
+                android:id="@+id/BtnHeadphoneI"
+                android:text="Headphone Inserted"
+                android:gravity="start"
+                android:textSize="20dp"
+                android:background="@drawable/action_baground"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <Button
+                android:id="@+id/BtnHeadphoneR"
+                android:text="Headphone Removed"
+                android:gravity="start"
+                android:textSize="20dp"
+                android:background="@drawable/action_baground"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+
+
+    <ImageView android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:id="@+id/iv1"
+        xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    </ImageView>
+</LinearLayout>

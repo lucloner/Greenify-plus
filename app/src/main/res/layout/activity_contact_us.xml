@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <LinearLayout android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+
+     <TextView
+
+         android:text="Contact us"
+         android:textSize="30dp"
+         android:textColor="#fd0303"
+         android:layout_gravity="center"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         />
+
+
+
+
+     <ImageView
+         android:src="@drawable/email"
+         android:layout_width="50dp"
+         android:layout_height="50dp"
+         android:layout_gravity="center"
+         android:layout_marginTop="60px"
+         android:layout_marginBottom="20px"/>
+
+     <TextView
+         android:layout_margin="5dp"
+         android:text=" greenifyplus@gmail.com"
+         android:textSize="25dp"
+         android:layout_width="wrap_content"
+         android:layout_height="match_parent"
+         android:layout_weight="2.85"
+         android:layout_gravity="center"
+         android:layout_marginTop="30dp"
+         />
+
+
+
+     <ImageView
+         android:src="@drawable/calllogo"
+         android:layout_width="49dp"
+         android:layout_height="50dp"
+         android:layout_gravity="center"
+         android:layout_marginTop="60px"
+         android:layout_marginBottom="20px"
+         />
+
+
+
+         <TextView
+             android:text=" 12345667890"
+             android:textSize="25dp"
+             android:layout_width="wrap_content"
+             android:layout_height="match_parent"
+             android:layout_gravity="center"/>
+
+
+
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>
+
+

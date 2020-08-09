@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="action_settings" type="id">2</item>
+    <item name="textView1" type="id" />
+    <item name="menu_new_content_twitter" type="id" />
+</resources>

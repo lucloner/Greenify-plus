@@ -126,7 +126,7 @@ if(getSupportActionBar() != null) {
 
                             Toast t1 = Toast.makeText(getApplicationContext(), "Processes Killed " + p1[l-1], Toast.LENGTH_SHORT);
                           t1.setGravity(Gravity.BOTTOM, 5, 5);
-                          t1.show();
+                            runOnUiThread(t1::show);
                       }
 
 

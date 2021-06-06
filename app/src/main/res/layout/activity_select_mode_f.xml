@@ -8,17 +8,18 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-    <LinearLayout android:layout_height="match_parent"
+    <LinearLayout
+        android:layout_height="wrap_content"
         android:layout_width="match_parent"
         android:orientation="vertical"
-        android:background="@color/baground_colour"
-        >
-    <TextView
-        android:text="Performance"
-        android:textSize="25dp"
-        android:layout_marginTop="20dp"
-        android:textColor="#0a1876"
-        android:layout_gravity="center"
+        android:background="@color/baground_colour">
+
+        <TextView
+            android:text="Performance"
+            android:textSize="25dp"
+            android:layout_marginTop="20dp"
+            android:textColor="#0a1876"
+            android:layout_gravity="center"
         android:textStyle="bold"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />

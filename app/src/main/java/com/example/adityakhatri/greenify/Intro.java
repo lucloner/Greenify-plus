@@ -74,10 +74,10 @@ public class Intro extends AppCompatActivity {
             @Override
             public void onClick(DialogInterface dialog, int which) {
 
-                Toast.makeText(getApplicationContext(),"Welcome",Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), "Welcome", Toast.LENGTH_SHORT).show();
             }
         });
-        adb.show();
+        runOnUiThread(adb::show);
     }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

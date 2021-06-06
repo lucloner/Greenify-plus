@@ -10,6 +10,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -48,7 +49,10 @@ public class Selection extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_selection);
 
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        ActionBar supportActionBar = getSupportActionBar();
+        if (supportActionBar != null) {
+            supportActionBar.setDisplayHomeAsUpEnabled(true);
+        }
 
         SelectMode = findViewById(R.id.SelectMode);
 
@@ -57,7 +61,7 @@ public class Selection extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                Intent i=new Intent(Selection.this,SelectMode_f.class);
+                Intent i = new Intent(Selection.this, SelectMode_f.class);
                 startActivity(i);
 
             }
@@ -103,10 +107,10 @@ public class Selection extends AppCompatActivity {
             @Override
             public void onClick(DialogInterface dialog, int which) {
 
-                Toast.makeText(getApplicationContext(),"hello",Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), "hello", Toast.LENGTH_SHORT).show();
             }
         });
-        adb.show();
+        runOnUiThread(adb::show);
     }
 
 

@@ -11,6 +11,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.List;
@@ -50,7 +51,10 @@ public class SelectMode_f extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_select_mode_f);
 
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        ActionBar supportActionBar = getSupportActionBar();
+        if (supportActionBar != null) {
+            supportActionBar.setDisplayHomeAsUpEnabled(true);
+        }
 
         ActPerformance = findViewById(R.id.ActPerformance);
         ActEco = findViewById(R.id.ActEco);
@@ -63,7 +67,7 @@ public class SelectMode_f extends AppCompatActivity {
             public void onClick(View v) {
                 Toast t = Toast.makeText(SelectMode_f.this, "Activated Performance mode", Toast.LENGTH_LONG);
                 t.setGravity(Gravity.BOTTOM, 0, 0);
-                t.show();
+                runOnUiThread(t::show);
 
                 Intent i = new Intent(SelectMode_f.this, SelectMode.class);
                 startActivity(i);
@@ -77,8 +81,8 @@ public class SelectMode_f extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Toast t= Toast.makeText(SelectMode_f.this,"Activated Eco mode",Toast.LENGTH_SHORT);
-                t.setGravity(Gravity.BOTTOM,0,0);
-                t.show();
+                t.setGravity(Gravity.BOTTOM, 0, 0);
+                runOnUiThread(t::show);
 
 
 //
@@ -100,8 +104,8 @@ public class SelectMode_f extends AppCompatActivity {
 
                         actvityManager.killBackgroundProcesses(procInfos.get(pnum).processName);
                         Toast t1= Toast.makeText(getApplicationContext(), "killed "+procInfos.get(pnum).processName, Toast.LENGTH_SHORT);
-                        t1.setGravity(Gravity.BOTTOM,5,5);
-                        t1.show();
+                        t1.setGravity(Gravity.BOTTOM, 5, 5);
+                        runOnUiThread(t::show);
 
                     }
                 }
@@ -115,8 +119,8 @@ public class SelectMode_f extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Toast t= Toast.makeText(SelectMode_f.this,"Activated Critical mode",Toast.LENGTH_SHORT);
-                t.setGravity(Gravity.BOTTOM,5,5);
-                t.show();
+                t.setGravity(Gravity.BOTTOM, 5, 5);
+                runOnUiThread(t::show);
                 Intent i =new Intent(SelectMode_f.this,RunningApp.class);
                 startActivity(i);
 
@@ -127,8 +131,8 @@ public class SelectMode_f extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Toast t= Toast.makeText(SelectMode_f.this,"Activated Custom mode",Toast.LENGTH_SHORT);
-                t.setGravity(Gravity.BOTTOM,0,0);
-                t.show();
+                t.setGravity(Gravity.BOTTOM, 0, 0);
+                runOnUiThread(t::show);
 
                 Intent i=new Intent(SelectMode_f.this,CustomMode.class);
                 startActivity(i);

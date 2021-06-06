@@ -10,6 +10,7 @@ import android.widget.Button;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.ArrayList;
@@ -51,11 +52,14 @@ public class CustomMode extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_custom_mode);
 
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        ActionBar supportActionBar = getSupportActionBar();
+        if (supportActionBar != null) {
+            supportActionBar.setDisplayHomeAsUpEnabled(true);
+        }
 
         cstmlist = findViewById(R.id.cstmlist);
 
-        ArrayList<String> ModeLyst =new ArrayList<>();
+        ArrayList<String> ModeLyst = new ArrayList<>();
 
         ModeLyst.add("Whatsapp");
         ModeLyst.add("Instagram");

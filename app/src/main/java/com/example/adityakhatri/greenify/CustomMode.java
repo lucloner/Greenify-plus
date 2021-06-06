@@ -2,7 +2,6 @@ package com.example.adityakhatri.greenify;
 
 import android.content.Intent;
 import android.net.Uri;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -10,6 +9,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.ArrayList;
 
@@ -52,7 +53,7 @@ public class CustomMode extends AppCompatActivity {
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        cstmlist = (ListView) findViewById(R.id.cstmlist);
+        cstmlist = findViewById(R.id.cstmlist);
 
         ArrayList<String> ModeLyst =new ArrayList<>();
 
@@ -88,7 +89,7 @@ public class CustomMode extends AppCompatActivity {
 
         cstmlist.setAdapter(new BaseAdapter_mode(CustomMode.this,ModeLyst));
 
-        modeset = (Button) findViewById(R.id.modeset);
+        modeset = findViewById(R.id.modeset);
 
         modeset.setOnClickListener(new View.OnClickListener() {
             @Override

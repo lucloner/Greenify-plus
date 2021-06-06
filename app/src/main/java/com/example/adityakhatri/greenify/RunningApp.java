@@ -3,16 +3,9 @@ package com.example.adityakhatri.greenify;
 import android.app.Activity;
 import android.app.ActivityManager;
 import android.app.ActivityManager.RunningAppProcessInfo;
-import android.content.Context;
 import android.content.Intent;
-import android.content.pm.ApplicationInfo;
-import android.content.pm.PackageInfo;
-import android.content.pm.PackageManager;
 import android.net.Uri;
-import android.os.Build;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -20,8 +13,10 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
+
 import java.util.List;
-import java.util.*;
 
 public class RunningApp extends AppCompatActivity {
     @Override
@@ -61,7 +56,7 @@ if(getSupportActionBar() != null) {
     getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 }
 
-        TextView tv = (TextView) findViewById(R.id.textView1);
+        TextView tv = findViewById(R.id.textView1);
 
 
 
@@ -84,7 +79,7 @@ if(getSupportActionBar() != null) {
 
             tv.setText(tv.getText() + "" + (idx + 1) + ". "
 
-                    + p1[l-1].toUpperCase() + "\n");
+                    + p1[l - 1].toUpperCase() + "\n");
 
 
         }
@@ -94,15 +89,15 @@ if(getSupportActionBar() != null) {
 //            tv.setText(tv.getText()+processInfo.processName+"\n");
 //        }
 
-        BtnKill = (Button) findViewById(R.id.BtnKill);
-        BtnRefresh= (Button) findViewById(R.id.BtnRefresh);
+        BtnKill = findViewById(R.id.BtnKill);
+        BtnRefresh = findViewById(R.id.BtnRefresh);
 
         BtnKill.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
                 ActivityManager actvityManager = (ActivityManager)
-                        getApplicationContext().getSystemService( getApplicationContext().ACTIVITY_SERVICE );
+                        getApplicationContext().getSystemService(getApplicationContext().ACTIVITY_SERVICE);
 //                List<ActivityManager.RunningAppProcessInfo> procInfos = actvityManager.getRunningAppProcesses();
                 List<RunningAppProcessInfo> packages;
 //                PackageManager pm;

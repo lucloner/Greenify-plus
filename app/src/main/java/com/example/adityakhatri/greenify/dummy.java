@@ -1,13 +1,14 @@
 package com.example.adityakhatri.greenify;
 
 import android.content.Context;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.GestureDetector;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class dummy extends AppCompatActivity {
 
@@ -85,7 +86,7 @@ public class dummy extends AppCompatActivity {
 
 
         }
-ImageView iv1= (ImageView) findViewById(R.id.iv);
+        ImageView iv1 = findViewById(R.id.iv);
             iv1.setOnTouchListener(new OnSwipeTouchListener(dummy.this) {
                 public void onSwipeTop() {
                     Toast.makeText(dummy.this,"top",Toast.LENGTH_SHORT).show();

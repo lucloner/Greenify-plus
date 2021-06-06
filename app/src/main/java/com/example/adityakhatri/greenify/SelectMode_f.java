@@ -1,12 +1,8 @@
 package com.example.adityakhatri.greenify;
 
 import android.app.ActivityManager;
-import android.content.Context;
 import android.content.Intent;
-import android.content.pm.PackageManager;
-import android.net.TrafficStats;
 import android.net.Uri;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Gravity;
 import android.view.Menu;
@@ -14,6 +10,8 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.List;
 
@@ -54,20 +52,20 @@ public class SelectMode_f extends AppCompatActivity {
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        ActPerformance= (Button) findViewById(R.id.ActPerformance);
-        ActEco= (Button) findViewById(R.id.ActEco);
-        ActCritical= (Button) findViewById(R.id.ActCritical);
-        ActCustom= (Button) findViewById(R.id.ActCustom);
+        ActPerformance = findViewById(R.id.ActPerformance);
+        ActEco = findViewById(R.id.ActEco);
+        ActCritical = findViewById(R.id.ActCritical);
+        ActCustom = findViewById(R.id.ActCustom);
 
 
         ActPerformance.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast t= Toast.makeText(SelectMode_f.this,"Activated Performance mode",Toast.LENGTH_LONG);
-                t.setGravity(Gravity.BOTTOM,0,0);
+                Toast t = Toast.makeText(SelectMode_f.this, "Activated Performance mode", Toast.LENGTH_LONG);
+                t.setGravity(Gravity.BOTTOM, 0, 0);
                 t.show();
 
-                Intent i=new Intent(SelectMode_f.this,SelectMode.class);
+                Intent i = new Intent(SelectMode_f.this, SelectMode.class);
                 startActivity(i);
 
 

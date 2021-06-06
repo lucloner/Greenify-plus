@@ -1,26 +1,17 @@
 package com.example.adityakhatri.greenify;
 
-import android.app.ActivityManager;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
-import android.os.Process;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentTransaction;
-import android.support.v7.app.AlertDialog;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.AdapterView;
 import android.widget.Button;
-import android.widget.ListView;
 import android.widget.Toast;
 
-import java.util.List;
-
-import static com.example.adityakhatri.greenify.R.id.parent;
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
 
 public class Selection extends AppCompatActivity {
     @Override
@@ -59,7 +50,7 @@ public class Selection extends AppCompatActivity {
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        SelectMode = (Button) findViewById(R.id.SelectMode);
+        SelectMode = findViewById(R.id.SelectMode);
 
 
         SelectMode.setOnClickListener(new View.OnClickListener() {
@@ -72,7 +63,7 @@ public class Selection extends AppCompatActivity {
             }
         });
 
-        SelectMacro= (Button) findViewById(R.id.SelectMacro);
+        SelectMacro = findViewById(R.id.SelectMacro);
 
 
         SelectMacro.setOnClickListener(new View.OnClickListener() {

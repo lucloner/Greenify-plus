@@ -2,9 +2,6 @@ package com.example.adityakhatri.greenify;
 
 import android.content.Intent;
 import android.net.Uri;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentTransaction;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -12,10 +9,14 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
+
 public class CreateMacro extends AppCompatActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.mymenu,menu);
+        getMenuInflater().inflate(R.menu.mymenu, menu);
         return true;
     }
 
@@ -50,17 +51,17 @@ public class CreateMacro extends AppCompatActivity {
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        trig = (Button) findViewById(R.id.trig);
-        act = (Button) findViewById(R.id.act);
+        trig = findViewById(R.id.trig);
+        act = findViewById(R.id.act);
 
-        final FragmentManager FM =getSupportFragmentManager();
+        final FragmentManager FM = getSupportFragmentManager();
 
         trig.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                FragmentTransaction FT=FM.beginTransaction();
-                FT.replace(R.id.frmlyt,new FrmTrigger());
+                FragmentTransaction FT = FM.beginTransaction();
+                FT.replace(R.id.frmlyt, new FrmTrigger());
                 FT.commit();
             }
         });
